@@ -64,8 +64,17 @@ $(document).ready(function () {
         });
 
 
+    });
 
-
+    // Handle clicking on category buttons
+    $('.category-btn').click(function() {
+        var target = $(this).data('target');
+        var sectionOffset = $('#' + target).offset().top;
+        
+        var offset = 50; // Adjust this value as needed
+        $('html, body').animate({
+            scrollTop: sectionOffset - offset
+        }, 800); // Adjust the scroll speed as needed
     });
 });
 
